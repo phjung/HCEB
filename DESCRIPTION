@@ -1,11 +1,16 @@
 Package: HCEB
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Heteroscedastic Consistent Empirical Bayes Rate and Spatial Autocorrelation
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: **** **** <******@****.edu>
+Maintainer: anonym <anonym@anonym.edu>
+Depends: R (>= 3.0.0)
+Imports:
+  spdep (>= 0.6),
+  Matrix (>= 1.0.12)
+  spData
+Description: A collection of functions to compute heteroscedastic consistent empirical Bayes (HC-EB) areal incidence rate and spatial autocorrelation statistics. Based on Empirical Bayes method, HC-EB method adjusts areal incidence rates to the overall rate by level of heteroscedasticity from different population size and sampling errors of denominator data. Functions utilize margin of error information of population-at-risk (denominator). Functions to compute Global and Local Moran's I statistics by HC-EB method are also provided to remedy high data uncertainty and sampling errors of population-at-risk. Functions for permutation tests bot for Global and Local HC-EB Moran's I are provided for statistical inferences.
+License: GPL (>= 2)
 Encoding: UTF-8
-LazyData: true
+RoxygenNote: 6.0.1
+LazyData: TRUE
