@@ -4,30 +4,28 @@
 \alias{HCEB.moran.mc}
 \title{Permutation test for Global Heteroscedastic Consistent Empirical Bayes Moran's I}
 \usage{
-HCEB.moran.mc(x, n, k, b = 0, listw, sig = 0.05, nsim,
-  zero.policy = NULL)
+HCEB.moran.mc(n, x, se, zero.policy = NULL, listw, sig = 0.05,
+  nsim = 1000)
 }
 \arguments{
-\item{x}{a numeric vector of counts of cases}
+\item{n}{a numeric vector of counts of cases (numerator)}
 
-\item{n}{a numeric vector of populations at risk}
+\item{x}{a numeric vector of populations at risk (denominator)}
 
-\item{k}{a numeric vector of margin of errors of x}
+\item{se}{a numeric vector of sampling standard errors of corresponding populations at risk}
 
-\item{b}{default 0, base populations-at-risk}
+\item{zero.policy}{default NULL, use global option value; if TRUE assign zero to the lagged value of zones without neighbours, if FALSE assign NA}
 
 \item{listw}{a listw object created for example by nb2listw}
 
 \item{sig}{default 0.05, pseudo significance level for permutation test}
 
 \item{nsim}{number of permutations}
-
-\item{zero.policy}{default NULL, use global option value; if TRUE assign zero to the lagged value of zones without neighbours, if FALSE assign NA}
 }
 \description{
-A permutation test for Global HC-EB Moran's I statistics by using nsim random permutations of HC-EB rate.
+A permutation test for Global HC-EB Moran's I statistics by using nsim random permutations of HC-EB rates.
 }
 \references{
-#####, ##### and #####. 2018. Small area adjustment of spatial autocorrelation estimators for heteroscedastic sampling errors, Geographical Analysis (under review)
+Jung, PH, Thill J-C, Issel M 2018 Spatial Autocorrelation Statistics of Areal Prevalence Rates under High Uncertainty in Denominator Data, Geographical Analysis
 }
 \keyword{HCEB}
