@@ -4,7 +4,14 @@
 #' @param n a numeric vector of counts of cases (numerator)
 #' @param x a numeric vector of populations at risk (denominator)
 #' @param se a numeric vector of sampling standard errors of corresponding populations at risk
-#' @return
+#' @return A data frame with three columns:
+#' \item{raw}{a numerical vector of raw rates}
+#' \item{EB}{a numerical vector of empirical Bayes estimates}
+#' \item{HCEB}{a numerical vector of heteroscedasticity-consistent empirical Bayes estimates}
+#' @return with parameters
+#' \item{w_EB}{Empirical Bayes weight}
+#' \item{w_HCEB}{Heteroscedasticity-consistent empirical Bayes weight}
+#' \item{m}{Overall mean rate}
 #' @references Jung, PH, Thill J-C, Issel M 2018 Spatial Autocorrelation Statistics of Areal Prevalence Rates under High Uncertainty in Denominator Data, Geographical Analysis
 #' @keywords HCEB
 #' @export

@@ -13,6 +13,17 @@ HCEB.est(n, x, se)
 
 \item{se}{a numeric vector of sampling standard errors of corresponding populations at risk}
 }
+\value{
+A data frame with three columns:
+\item{raw}{a numerical vector of raw rates}
+\item{EB}{a numerical vector of empirical Bayes estimates}
+\item{HCEB}{a numerical vector of heteroscedasticity-consistent empirical Bayes estimates}
+
+with parameters
+\item{w_EB}{Empirical Bayes weight}
+\item{w_HCEB}{Heteroscedasticity-consistent empirical Bayes weight}
+\item{m}{Overall mean rate}
+}
 \description{
 Compute HC-EB rate estimates for rates smoothed to the overall mean by their denominator data uncertainty.
 }
