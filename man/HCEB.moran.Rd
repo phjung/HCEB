@@ -2,7 +2,7 @@
 % Please edit documentation in R/HCEB.moran.R
 \name{HCEB.moran}
 \alias{HCEB.moran}
-\title{Global Heteroscedastic Consistent Empirical Bayes Moran's I estimator}
+\title{Global Heteroscedasticity-Consistent Empirical Bayes Moran's I estimator}
 \usage{
 HCEB.moran(n, x, se, listw, zero.policy = NULL)
 }

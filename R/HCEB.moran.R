@@ -1,4 +1,4 @@
-#' Global Heteroscedastic Consistent Empirical Bayes Moran's I estimator
+#' Global Heteroscedasticity-Consistent Empirical Bayes Moran's I estimator
 #'
 #' Compute Global HC-EB Moran's I. Global Moran's I of areal prevalence rates with uncertainty in denominator.
 #' @param n a numeric vector of counts of cases (numerator)
@@ -33,8 +33,10 @@ HCEB.moran <- function (n, x, se, listw, zero.policy = NULL)
   if (length(x) != length(n) | length(n) != length(se) | length(x) != length(se))
     stop("vectors of different length")
   if (is.null(zero.policy))
-    zero.policy <- get("zeroPolicy")
+    zero.policy <- get("zeroPolicy", envir = .spdepOptions)
   stopifnot(is.logical(zero.policy))
+  if (!inherits(listw, "listw"))
+    stop(paste(deparse(substitute(listw)), "is not a listw object"))
 
   n1 <- length(listw$neighbours)
   if (n1 != length(x))
@@ -52,3 +54,4 @@ HCEB.moran <- function (n, x, se, listw, zero.policy = NULL)
 
   res
 }
+environment(HCEB.moran) <- asNamespace("spdep")

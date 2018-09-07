@@ -2,25 +2,23 @@
 % Please edit documentation in R/HCEB.local.R
 \name{HCEB.local}
 \alias{HCEB.local}
-\title{Local Heteroscedastic Consistent Empirical Bayes Moran's I statistic}
+\title{Local Heteroscedasticity-Consistent Empirical Bayes Moran's I statistic}
 \usage{
-HCEB.local(x, n, k, b = 0, listw, zero.policy = NULL)
+HCEB.local(n, x, se, listw, zero.policy = NULL)
 }
 \arguments{
-\item{x}{a numeric vector of counts of cases}
+\item{n}{a numeric vector of counts of cases (numerator)}
 
-\item{n}{a numeric vector of populations at risk}
+\item{x}{a numeric vector of populations at risk (denominator)}
 
-\item{k}{a numeric vector of margin of errors of x}
-
-\item{b}{default 0, base populations-at-risk}
+\item{se}{a numeric vector of sampling standard errors of corresponding populations at risk}
 
 \item{listw}{a listw object created for example by nb2listw}
 
 \item{zero.policy}{default NULL, use global option value; if TRUE assign zero to the lagged value of zones without neighbours, if FALSE assign NA}
 }
 \description{
-Compute Local HC-EB Moran's I. Local Moran's I with each case weighted by HC-EB method
+Compute Local HC-EB Moran's Is. Local Moran's Is of areal prevalence rates with uncertainty in denominator.
 }
 \references{
 #####, ##### and #####. 2018. Small area adjustment of spatial autocorrelation estimators for heteroscedastic sampling errors, Geographical Analysis (under review)

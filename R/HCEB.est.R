@@ -1,4 +1,4 @@
-#' Heteroscedastic Consistent Empirical Bayes rate
+#' Heteroscedasticity-Consistent Empirical Bayes rate
 #'
 #' Compute HC-EB rate estimates for rates smoothed to the overall mean by their denominator data uncertainty.
 #' @param n a numeric vector of counts of cases (numerator)
@@ -9,8 +9,8 @@
 #' \item{EB}{a numerical vector of empirical Bayes estimates}
 #' \item{HCEB}{a numerical vector of heteroscedasticity-consistent empirical Bayes estimates}
 #' @return with parameters
-#' \item{w_EB}{Empirical Bayes weight}
-#' \item{w_HCEB}{Heteroscedasticity-consistent empirical Bayes weight}
+#' \item{w.EB}{Empirical Bayes weight}
+#' \item{w.HCEB}{Heteroscedasticity-consistent empirical Bayes weight}
 #' \item{m}{Overall mean rate}
 #' @references Jung, PH, Thill J-C, Issel M 2018 Spatial Autocorrelation Statistics of Areal Prevalence Rates under High Uncertainty in Denominator Data, Geographical Analysis
 #' @keywords HCEB
@@ -65,8 +65,8 @@ HCEB.est <- function(n, x, se)
   r_HCEB <- w_HCEB*(r_std)+m
 
   res <- data.frame(raw=r, EB=r_EB, HCEB=r_HCEB)
-  attr(res, "weight_EB") <- w_EB
-  attr(res, "weight_HCEB") <- w_HCEB
+  attr(res, "weight.EB") <- w_EB
+  attr(res, "weight.HCEB") <- w_HCEB
   attr(res, "m") <- m
   res
 }

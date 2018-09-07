@@ -2,7 +2,7 @@
 % Please edit documentation in R/HCEB.est.R
 \name{HCEB.est}
 \alias{HCEB.est}
-\title{Heteroscedastic Consistent Empirical Bayes rate}
+\title{Heteroscedasticity-Consistent Empirical Bayes rate}
 \usage{
 HCEB.est(n, x, se)
 }
@@ -20,8 +20,8 @@ A data frame with three columns:
 \item{HCEB}{a numerical vector of heteroscedasticity-consistent empirical Bayes estimates}
 
 with parameters
-\item{w_EB}{Empirical Bayes weight}
-\item{w_HCEB}{Heteroscedasticity-consistent empirical Bayes weight}
+\item{w.EB}{Empirical Bayes weight}
+\item{w.HCEB}{Heteroscedasticity-consistent empirical Bayes weight}
 \item{m}{Overall mean rate}
 }
 \description{

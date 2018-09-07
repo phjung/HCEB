@@ -2,9 +2,9 @@
 % Please edit documentation in R/HCEB.moran.mc.R
 \name{HCEB.moran.mc}
 \alias{HCEB.moran.mc}
-\title{Permutation test for Global Heteroscedastic Consistent Empirical Bayes Moran's I}
+\title{Permutation test for Global Heteroscedasticity-Consistent Empirical Bayes Moran's I}
 \usage{
-HCEB.moran.mc(n, x, se, zero.policy = NULL, listw, sig = 0.05,
+HCEB.moran.mc(n, x, se, listw, zero.policy = NULL, sig = 0.05,
   nsim = 1000)
 }
 \arguments{
@@ -14,13 +14,17 @@ HCEB.moran.mc(n, x, se, zero.policy = NULL, listw, sig = 0.05,
 
 \item{se}{a numeric vector of sampling standard errors of corresponding populations at risk}
 
-\item{zero.policy}{default NULL, use global option value; if TRUE assign zero to the lagged value of zones without neighbours, if FALSE assign NA}
-
 \item{listw}{a listw object created for example by nb2listw}
+
+\item{zero.policy}{default NULL, use global option value; if TRUE assign zero to the lagged value of zones without neighbours, if FALSE assign NA}
 
 \item{sig}{default 0.05, pseudo significance level for permutation test}
 
 \item{nsim}{number of permutations}
+}
+\value{
+\item{I.HCEB}{Heteroscedasticity-consistent empirical Bayes Global Moran's I}
+\item{p.perm}{pseudo p-value of Monte-Carlo permutation test}
 }
 \description{
 A permutation test for Global HC-EB Moran's I statistics by using nsim random permutations of HC-EB rates.

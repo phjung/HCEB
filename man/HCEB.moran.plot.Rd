@@ -2,19 +2,17 @@
 % Please edit documentation in R/HCEB.moran.plot.R
 \name{HCEB.moran.plot}
 \alias{HCEB.moran.plot}
-\title{Moran scatterplot with Heteroscedastic Consistent Empirical Bayes rate}
+\title{Moran scatterplot with Heteroscedasticity-Consistent Empirical Bayes rate}
 \usage{
-HCEB.moran.plot(x, n, k, b = 0, listw, zero.policy = NULL,
-  spChk = NULL, labels = NULL, xlab = NULL, ylab = NULL, ...)
+HCEB.moran.plot(n, x, se, listw, zero.policy = NULL, spChk = NULL,
+  labels = NULL, xlab = NULL, ylab = NULL, ...)
 }
 \arguments{
-\item{x}{a numeric vector of counts of cases}
+\item{n}{a numeric vector of counts of cases (numerator)}
 
-\item{n}{a numeric vector of populations at risk}
+\item{x}{a numeric vector of populations at risk (denominator)}
 
-\item{k}{a numeric vector of margin of errors of x}
-
-\item{b}{default 0, base populations-at-risk}
+\item{se}{a numeric vector of sampling standard errors of corresponding populations at risk}
 
 \item{listw}{a listw object created for example by nb2listw}
 
@@ -28,6 +26,6 @@ HCEB.moran.plot(x, n, k, b = 0, listw, zero.policy = NULL,
 A plot of HC-EB spatial areal rate data against its spatially lagged values.
 }
 \references{
-#####, ##### and #####. 2018. Small area adjustment of spatial autocorrelation estimators for heteroscedastic sampling errors, Geographical Analysis (under review)
+Jung, PH, Thill J-C, Issel M 2018 Spatial Autocorrelation Statistics of Areal Prevalence Rates under High Uncertainty in Denominator Data, Geographical Analysis
 }
 \keyword{HCEB}

@@ -2,27 +2,25 @@
 % Please edit documentation in R/HCEB.local.mc.R
 \name{HCEB.local.mc}
 \alias{HCEB.local.mc}
-\title{Permutation test for Local Heteroscedastic Consistent Empirical Bayes Moran's I}
+\title{Permutation test for Local Heteroscedasticity-Consistent Empirical Bayes Moran's I}
 \usage{
-HCEB.local.mc(x, n, k, b = 0, listw, sig = 0.05, nsim,
-  zero.policy = NULL)
+HCEB.local.mc(n, x, se, listw, zero.policy = NULL, sig = 0.05,
+  nsim = 1000)
 }
 \arguments{
-\item{x}{a numeric vector of counts of cases}
+\item{n}{a numeric vector of counts of cases (numerator)}
 
-\item{n}{a numeric vector of populations at risk}
+\item{x}{a numeric vector of populations at risk (denominator)}
 
-\item{k}{a numeric vector of margin of errors of x}
-
-\item{b}{default 0, base populations-at-risk}
+\item{se}{a numeric vector of sampling standard errors of corresponding populations at risk}
 
 \item{listw}{a listw object created for example by nb2listw}
+
+\item{zero.policy}{default NULL, use global option value; if TRUE assign zero to the lagged value of zones without neighbours, if FALSE assign NA}
 
 \item{sig}{default 0.05, pseudo significance level for permutation test}
 
 \item{nsim}{number of permutations}
-
-\item{zero.policy}{default NULL, use global option value; if TRUE assign zero to the lagged value of zones without neighbours, if FALSE assign NA}
 }
 \description{
 A permutation test for Local HC-EB Moran's I statistics by using nsim random permutations of HC-EB rate.
