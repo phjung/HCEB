@@ -4,8 +4,8 @@
 \alias{HCEB.moran.plot}
 \title{Moran scatterplot with Heteroscedastic Consistent Empirical Bayes rate}
 \usage{
-HCEB.moran.plot(x, n, k, b = 0, listw, zero.policy = NULL, spChk = NULL,
-  labels = NULL, xlab = NULL, ylab = NULL, ...)
+HCEB.moran.plot(x, n, k, b = 0, listw, zero.policy = NULL,
+  spChk = NULL, labels = NULL, xlab = NULL, ylab = NULL, ...)
 }
 \arguments{
 \item{x}{a numeric vector of counts of cases}

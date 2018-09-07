@@ -4,7 +4,8 @@
 \alias{HCEB.moran.mc}
 \title{Permutation test for Global Heteroscedastic Consistent Empirical Bayes Moran's I}
 \usage{
-HCEB.moran.mc(x, n, k, b = 0, listw, sig = 0.05, nsim, zero.policy = NULL)
+HCEB.moran.mc(x, n, k, b = 0, listw, sig = 0.05, nsim,
+  zero.policy = NULL)
 }
 \arguments{
 \item{x}{a numeric vector of counts of cases}

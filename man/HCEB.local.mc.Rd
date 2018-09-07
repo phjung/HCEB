@@ -4,7 +4,8 @@
 \alias{HCEB.local.mc}
 \title{Permutation test for Local Heteroscedastic Consistent Empirical Bayes Moran's I}
 \usage{
-HCEB.local.mc(x, n, k, b = 0, listw, sig = 0.05, nsim, zero.policy = NULL)
+HCEB.local.mc(x, n, k, b = 0, listw, sig = 0.05, nsim,
+  zero.policy = NULL)
 }
 \arguments{
 \item{x}{a numeric vector of counts of cases}

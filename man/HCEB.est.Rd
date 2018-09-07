@@ -4,21 +4,19 @@
 \alias{HCEB.est}
 \title{Heteroscedastic Consistent Empirical Bayes rate}
 \usage{
-HCEB.est(x, n, k, b = 0)
+HCEB.est(n, x, se)
 }
 \arguments{
-\item{x}{a numeric vector of counts of cases}
+\item{n}{a numeric vector of counts of cases (numerator)}
 
-\item{n}{a numeric vector of populations at risk}
+\item{x}{a numeric vector of populations at risk (denominator)}
 
-\item{k}{a numeric vector of margin of errors of x}
-
-\item{b}{default 0, base populations-at-risk}
+\item{se}{a numeric vector of sampling standard errors of corresponding populations at risk}
 }
 \description{
 Compute HC-EB rate estimates for rates smoothed to the overall mean by their denominator data uncertainty.
 }
 \references{
-#####, ##### and #####. 2018. Small area adjustment of spatial autocorrelation estimators for heteroscedastic sampling errors, Geographical Analysis (under review)
+Jung, PH, Thill J-C, Issel M 2018 Spatial Autocorrelation Statistics of Areal Prevalence Rates under High Uncertainty in Denominator Data, Geographical Analysis
 }
 \keyword{HCEB}
