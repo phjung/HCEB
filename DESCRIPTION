@@ -9,7 +9,7 @@ Maintainer: Paul H. Jung <pjung1@uncc.edu>
 Depends: R (>= 3.3.0), spdep
 Imports:
   spdep, Matrix, spData
-URL: https://github.com/phjung/HCEB/
+URL: https://github.com/phjung/HCEB
 Description: A collection of functions to compute heteroscedasticity consistent empirical Bayes (HC-EB) areal incidence rate and spatial autocorrelation statistics. HC-EB method is developed for computation of areal prevalence rates and Global and Local Moran's I under high uncertainty in denominator data. It is especially developed for cases where there are high uncertainty in denominator data and margins of error information available with the corresponding estimates, like using American Community Survey estimates. HC-EB smoothing method adjusts areal incidence rates to the global average rate by levels of heteroscedasticity from different population sizes and sampling errors of denominator data. Functions utilize margin of error information of population-at-risk (denominator). Functions to compute Global and Local Moran's I statistics by HC-EB method are also provided to remedy high data uncertainty and sampling errors of population-at-risk. Functions for permutation tests both for Global and Local HC-EB Moran's I are provided for statistical inferences.
 License: GPL (>= 2)
 RoxygenNote: 6.1.0
