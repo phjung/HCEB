@@ -5,4 +5,4 @@ export(HCEB.local)
 export(HCEB.local.mc)
 export(HCEB.moran)
 export(HCEB.moran.mc)
-export(HCEB.moran.plot
+export(HCEB.moran.plot)
